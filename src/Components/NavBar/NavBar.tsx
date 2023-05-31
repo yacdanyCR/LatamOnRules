@@ -5,8 +5,9 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import { WbSunnyTwoTone, GitHub } from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
+import Switch from '../Switch/Switch';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -59,13 +60,12 @@ const NavBar = () => {
 				<Toolbar
 					style=
 					{{
-						justifyContent: "center",
-						gap: "4rem"
+						justifyContent: "space-around"
 					}}
 				>
 					<IconButton
 					>
-						<WbSunnyTwoTone />
+						<Switch />
 					</IconButton>
 					<Search>
 						<SearchIconWrapper>
@@ -76,7 +76,9 @@ const NavBar = () => {
 					</Search>
 					<Typography
 					>
-						<GitHub />
+						<IconButton>
+							<GitHub fontSize='large' />
+						</IconButton>
 					</Typography>
 				</Toolbar>
 			</AppBar>
