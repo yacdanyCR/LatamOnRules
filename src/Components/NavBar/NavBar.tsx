@@ -53,14 +53,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 const NavBar = () => {
-
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="static">
+			<AppBar position="static" className='lightTheme'>
 				<Toolbar
 					style=
 					{{
-						justifyContent: "space-around"
+						justifyContent: "space-around",
 					}}
 				>
 					<IconButton

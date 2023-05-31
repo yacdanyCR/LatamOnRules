@@ -15,7 +15,7 @@ const Card = ({ user }: Props) => {
 	return (
 		<MuiCard sx={{ maxWidth: 345 }}>
 			<CardMedia
-				sx={{ height: 140, width: 250 }}
+				sx={{ height: 200, width: 250, margin: "1rem" }}
 				image={user.image}
 				title={user.name}
 			/>

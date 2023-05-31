@@ -7,7 +7,7 @@ const HomePage = () => {
 	const [users, setUsers] = useState<DBUserProps[]>(DBUsers)
 
 	return (
-		<div className="main">
+		<div className="main lightTheme">
 			<section>
 				<div
 					style=
@@ -16,7 +16,7 @@ const HomePage = () => {
 						justifyContent: "center",
 						flexWrap: "wrap",
 						gap: "50px",
-						marginTop: "2.5rem"
+						paddingTop: "2.5rem"
 					}}
 				>
 					{users.map((el, index) => <Card user={el} key={index} />)}

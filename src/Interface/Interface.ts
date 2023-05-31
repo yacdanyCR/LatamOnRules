@@ -7,6 +7,12 @@ interface DBUserProps {
 	linkeldn?: string
 }
 
+interface ThemeProps {
+	handleTheme: () => void,
+	setTheme: React.Dispatch<React.SetStateAction<string>>
+}
+
 export type {
-	DBUserProps
+	DBUserProps,
+	ThemeProps
 }
