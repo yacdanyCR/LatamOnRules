@@ -1,8 +1,8 @@
 interface DBUserProps {
 	image: string,
 	githubUsername: string,
-	name: string,
-	summary: string,
+	name?: string,
+	summary?: string,
 	githubLink: string,
 	linkeldn?: string
 }

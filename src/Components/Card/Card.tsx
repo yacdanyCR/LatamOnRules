@@ -15,23 +15,29 @@ const Card = ({ user }: Props) => {
 	return (
 		<MuiCard sx={{ maxWidth: 345 }}>
 			<CardMedia
-				sx={{ height: 140 }}
+				sx={{ height: 140, width: 250 }}
 				image={user.image}
 				title={user.name}
 			/>
 			<CardContent>
 				<Typography gutterBottom variant="h5" component="div">
-
+					{user.name}
 				</Typography>
 				<Typography variant="body2" color="text.secondary">
 					{user.summary}
 				</Typography>
 			</CardContent>
-			<CardActions>
-				<Button size="large">
+			<CardActions
+				style=
+				{{
+					display: "flex",
+					justifyContent: "space-around"
+				}}
+			>
+				<Button size="large" href={user.githubLink}>
 					<GitHub fontSize='large' />
 				</Button>
-				<Button size="large">
+				<Button size="large" href={user.linkeldn}>
 					<LinkedIn fontSize='large' />
 				</Button>
 			</CardActions>
