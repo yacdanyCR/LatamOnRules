@@ -1,7 +1,10 @@
+import { useState } from "react"
 import Card from "../Components/Card/Card"
+import { DBUserProps } from "../Interface/Interface"
+import { DBUsers } from "../DB/DBgitUser"
 
 const HomePage = () => {
-	const cont = new Array(10).fill(0)
+	const [users, setUsers] = useState<DBUserProps[]>(DBUsers)
 
 	return (
 		<div className="main">
@@ -16,7 +19,7 @@ const HomePage = () => {
 						marginTop: "2.5rem"
 					}}
 				>
-					{cont.map((el) => <Card />)}
+					{users.map((el, index) => <Card user={el} key={index} />)}
 				</div>
 			</section>
 		</div>
