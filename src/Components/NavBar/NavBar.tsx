@@ -80,7 +80,7 @@ const NavBar = () => {
 					</Search>
 					<Typography
 					>
-						<IconButton>
+						<IconButton href='https://github.com/yacdanyCR/LatamOnRules' target='_blank'>
 							<GitHub fontSize='large' />
 						</IconButton>
 					</Typography>

@@ -13,7 +13,7 @@ interface Props {
 
 const Card = ({ user }: Props) => {
 	return (
-		<MuiCard sx={{ maxWidth: 345 }}>
+		<MuiCard sx={{ maxWidth: 345, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
 			<CardMedia
 				sx={{ height: 200, width: 250, margin: "1rem" }}
 				image={user.image}

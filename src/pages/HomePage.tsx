@@ -18,7 +18,7 @@ const HomePage = () => {
 						justifyContent: "center",
 						flexWrap: "wrap",
 						gap: "50px",
-						paddingTop: "2.5rem"
+						padding: "1rem"
 					}}
 				>
 					{users.map((el, index) => <Card user={el} key={index} />)}
