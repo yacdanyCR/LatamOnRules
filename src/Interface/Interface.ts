@@ -18,8 +18,18 @@ interface SetThemeProps {
 	themeSelected: string
 }
 
+interface PaginationProps {
+	users: DBUserProps[],
+	setUsers: React.Dispatch<React.SetStateAction<DBUserProps[]>>,
+	totalPages: number,
+	currentPage: number,
+	setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
+	handleChange: (event: React.ChangeEvent<unknown>, value: number) => void
+}
+
 export type {
 	DBUserProps,
 	ThemeProps,
-	SetThemeProps
+	SetThemeProps,
+	PaginationProps
 }
