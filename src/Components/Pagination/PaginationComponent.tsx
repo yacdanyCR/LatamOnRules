@@ -12,6 +12,9 @@ const PaginationComponent = () => {
 		<Stack spacing={2} style={{ textAlign: "center" }}>
 			<h1>Page:{currentPage}</h1>
 			<Pagination
+				size='large'
+				shape='rounded'
+				color='primary'
 				count={totalPages}
 				page={currentPage}
 				onChange={handleChange}
