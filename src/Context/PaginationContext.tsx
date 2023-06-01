@@ -15,7 +15,7 @@ const PaginationProvider = ({ children }: Props) => {
 	const [currentPage, setCurrentPage] = useState<number>(1)
 	const totalPages = Math.round(Array.from(DBUsers).length / USERS_PER_PAGE)
 
-	const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+	const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
 		setCurrentPage(value)
 		const nextIndex = (value * USERS_PER_PAGE) - 5
 		setUsers(Array.from(DBUsers).splice(nextIndex, USERS_PER_PAGE))
