@@ -8,6 +8,8 @@ import InputBase from '@mui/material/InputBase';
 import { GitHub } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
 import Switch from '../Switch/Switch';
+import { useContext } from 'react';
+import { ThemeContext } from '../../Context/ThemeContext';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -53,14 +55,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 const NavBar = () => {
+	const { theme } = useContext(ThemeContext)
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="static">
+			<AppBar position="static"
+				className={`${theme.themeSelected}`}>
 				<Toolbar
 					style=
 					{{
-						justifyContent: "space-around"
+						justifyContent: "space-around",
 					}}
 				>
 					<IconButton

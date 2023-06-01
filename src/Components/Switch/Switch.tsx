@@ -1,6 +1,8 @@
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Switch as muiSwitch } from '@mui/material';
+import { useContext } from 'react';
+import { ThemeContext } from '../../Context/ThemeContext';
 
 const MaterialUISwitch = styled(muiSwitch)(({ theme }) => ({
 	width: 62,
@@ -50,11 +52,14 @@ const MaterialUISwitch = styled(muiSwitch)(({ theme }) => ({
 }));
 
 const Switch = () => {
+	const { handleTheme, theme } = useContext(ThemeContext)
 	return (
 		<>
-			<FormControlLabel
+			<FormControlLabel checked={theme.checked}
+				onChange={(e) => console.log(e.target)}
 				control={<MaterialUISwitch sx={{ m: 1 }} />}
 				label=""
+				onClick={handleTheme}
 			/>
 		</>
 	)

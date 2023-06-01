@@ -1,3 +1,4 @@
+import { ThemeProvider } from './Context/ThemeContext'
 import './App.css'
 import NavBar from './Components/NavBar/NavBar'
 import HomePage from './pages/HomePage'
@@ -5,8 +6,10 @@ import HomePage from './pages/HomePage'
 function App() {
   return (
     <>
-      <NavBar />
-      <HomePage />
+      <ThemeProvider>
+        <NavBar />
+        <HomePage />
+      </ThemeProvider>
     </>
   )
 }
