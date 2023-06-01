@@ -8,3 +8,8 @@
 	background: rgb(116, 178, 235);
 	background: linear-gradient(29deg, rgba(116, 178, 235, 1) 49%, rgba(237, 235, 66, 1) 70%);
 }
+
+.darkTheme {
+	background: rgb(23, 33, 41);
+	background: linear-gradient(29deg, rgba(23, 33, 41, 1) 62%, rgba(255, 255, 243, 1) 93%);
+}

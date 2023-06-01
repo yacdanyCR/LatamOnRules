@@ -1,13 +1,15 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Card from "../Components/Card/Card"
 import { DBUserProps } from "../Interface/Interface"
 import { DBUsers } from "../DB/DBgitUser"
+import { ThemeContext } from "../Context/ThemeContext"
 
 const HomePage = () => {
 	const [users, setUsers] = useState<DBUserProps[]>(DBUsers)
+	const { theme } = useContext(ThemeContext)
 
 	return (
-		<div className="main lightTheme">
+		<div className={`${theme.themeSelected}`}>
 			<section>
 				<div
 					style=

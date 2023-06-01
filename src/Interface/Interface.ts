@@ -9,10 +9,17 @@ interface DBUserProps {
 
 interface ThemeProps {
 	handleTheme: () => void,
-	setTheme: React.Dispatch<React.SetStateAction<string>>
+	theme: SetThemeProps
+	setTheme: React.Dispatch<React.SetStateAction<SetThemeProps>>
+}
+
+interface SetThemeProps {
+	checked: boolean,
+	themeSelected: string
 }
 
 export type {
 	DBUserProps,
-	ThemeProps
+	ThemeProps,
+	SetThemeProps
 }
