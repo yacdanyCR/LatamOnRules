@@ -14,11 +14,18 @@ interface Props {
 const Card = ({ user }: Props) => {
 	return (
 		<MuiCard sx={{ maxWidth: 345, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-			<CardMedia
-				sx={{ height: 200, width: 250, margin: "1rem" }}
-				image={user.image}
-				title={user.name}
-			/>
+			{user.image ? (
+				<CardMedia
+					sx={{ height: 200, width: 250, margin: "1rem" }}
+					image={user.image || ""}
+					title={user.name}
+				/>
+			) :
+				(
+					<h1>Loading...</h1>
+				)
+			}
+
 			<CardContent>
 				<Typography gutterBottom variant="h5" component="div">
 					{user.name}

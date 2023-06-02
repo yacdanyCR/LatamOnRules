@@ -1,12 +1,18 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import Card from "../Components/Card/Card"
 import { ThemeContext } from "../Context/ThemeContext"
 import PaginationComponent from "../Components/Pagination/PaginationComponent"
 import { PaginationContext } from "../Context/PaginationContext"
+import { getContributesInfo } from "../Services/ContributesServices"
 
 const HomePage = () => {
-	const { users } = useContext(PaginationContext)
+	const { users, setUsers } = useContext(PaginationContext)
 	const { theme } = useContext(ThemeContext)
+
+	useEffect(() => {
+		getContributesInfo(setUsers, users)
+	}, [])
+
 
 	return (
 		<div className={`${theme.themeSelected}`}>
