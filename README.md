@@ -22,9 +22,6 @@ Contributions are always welcome!
 
 - Open the project and write Npm install to install dependecies
 
-- Browse to https://api.github.com/users/YourGithubUsername and copy the link "avatar_url" 
-
-- Go to src/DB/DBgitUser and create a new object with your information
+- Go to src/DB/DBgitUser.ts and add a object with your information
 
 - Push your branch
-
